@@ -9,7 +9,8 @@
     "clean": "npx babel-node ./scripts/clean",
     "reprepare": "npx babel-node ./scripts/re-prepare",
     "license": "npx babel-node ./scripts/license",
-    "lint": "npx eslint --cache ./src/**/*.js"
+    "lint": "npx eslint --cache ./src/**/*.js",
+    "changelog": "npx auto-changelog -p"
   },
   "files": [
     "src/**/*.js",
@@ -29,6 +30,7 @@
     "@babel/core": "^7.4.3",
     "@babel/node": "^7.2.2",
     "@babel/preset-env": "^7.4.3",
+    "auto-changelog": "^1.12.1",
     "babel-eslint": "^10.0.1",
     "babel-plugin-add-module-exports": "^1.0.0",
     "chalk": "^2.4.2",
