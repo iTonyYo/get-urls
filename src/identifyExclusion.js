@@ -3,7 +3,7 @@ import isArray from 'lodash/isArray';
 import isEmpty from 'lodash/isEmpty';
 
 export default (exclude) => {
-  let ex = null;
+  let ex = [];
 
   // 若提供且仅提供了一个过滤规则，将其转换成数
   // 组的形式，参见 ./getUrls.js#l20
