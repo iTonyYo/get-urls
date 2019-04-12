@@ -35,6 +35,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
         --out, -o, 指定存储位置，默认：'process.cwd()'，包含文件名，将获取到的链接以文件的形式保存
         --exclude, -f, 指定一个或多个过滤规则
         --extractFromQueryString, 是否从找到的链接中提取作为查询参数内容链接
+        --version, -V, 查看版本号
 
       示例
         $ get-urls ./playlist.m3u -o ./test.txt -f '(s|jpg)'
@@ -54,6 +55,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
         help: {
           type: 'boolean',
           alias: 'h'
+        },
+        version: {
+          type: 'boolean',
+          alias: 'V'
         }
       }
     });
