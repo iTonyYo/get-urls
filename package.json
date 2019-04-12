@@ -1,0 +1,79 @@
+{
+  "bin": {
+    "get-urls": "esm/cli.js"
+  },
+  "main": "esm/getUrls.js",
+  "scripts": {
+    "start": "DEBUG=LG:* npx babel-node ./esm/cli ./test/playlist-1.m3u ./test/playlist-2.m3u --exclude '(s|jpg)' --out './test/result.txt' --extractFromQueryString",
+    "build": "npx babel-node ./scripts/clean-built && npx babel-node ./scripts/build",
+    "clean": "npx babel-node ./scripts/clean",
+    "reprepare": "npx babel-node ./scripts/re-prepare",
+    "license": "npx babel-node ./scripts/license",
+    "lint": "npx eslint --cache ./src/**/*.js"
+  },
+  "files": [
+    "src/**/*.js",
+    "esm/**/*.js"
+  ],
+  "dependencies": {
+    "get-urls": "^9.0.0",
+    "lodash": "^4.17.11",
+    "meow": "^5.0.0",
+    "normalize-url": "^4.3.0",
+    "p-map": "^2.1.0",
+    "update-notifier": "^2.5.0",
+    "url-regex": "^4.1.1",
+    "write-file-atomic": "^2.4.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.4.3",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-add-module-exports": "^1.0.0",
+    "chalk": "^2.4.2",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "execa": "^1.0.0",
+    "fast-glob": "^2.2.6",
+    "license-checker": "^25.0.1",
+    "listr": "^0.14.3",
+    "make-dir": "^3.0.0",
+    "trash": "^5.2.0"
+  },
+  "keywords": [
+    "cli",
+    "extract",
+    "scrape",
+    "find",
+    "get",
+    "url",
+    "urls",
+    "string"
+  ],
+  "engines": {
+    "node": ">=10.13.0",
+    "npm": ">=6.9.0",
+    "yarn": ">=1.15.2"
+  },
+  "private": false,
+  "name": "@oopsunome/get-urls",
+  "description": "获取文本中所有链接，支持过滤。",
+  "version": "0.0.0",
+  "author": {
+    "name": "iyowei",
+    "email": "swzyocowboy@icloud.com",
+    "url": "https://github.com/iTonyYo"
+  },
+  "repository": {
+    "url": "git@github.com:iTonyYo/get-urls.git",
+    "type": "git"
+  },
+  "homepage": "https://github.com/iTonyYo/get-urls",
+  "bugs": "https://github.com/iTonyYo/get-urls/issues",
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT"
+}
