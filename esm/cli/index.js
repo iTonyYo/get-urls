@@ -13,13 +13,13 @@ var _size = _interopRequireDefault(require("lodash/size"));
 
 var _saveFile = _interopRequireDefault(require("./saveFile"));
 
-var _getUrlsInFiles = _interopRequireDefault(require("./getUrlsInFiles"));
+var _getUrlsFromMultipleFiles = _interopRequireDefault(require("./getUrlsFromMultipleFiles"));
 
-var _getUrlsInFile = _interopRequireDefault(require("./getUrlsInFile"));
+var _getUrlsFromOneFile = _interopRequireDefault(require("./getUrlsFromOneFile"));
 
-var _identifyExclusion = _interopRequireDefault(require("./identifyExclusion"));
+var _getExclusion = _interopRequireDefault(require("./getExclusion"));
 
-var _identifyOutput = _interopRequireDefault(require("./identifyOutput"));
+var _getOutput = _interopRequireDefault(require("./getOutput"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -74,27 +74,28 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
       exclude,
       extractFromQueryString
     } = flags;
+    const noInput = (0, _isEqual.default)((0, _size.default)(input), 0);
+    const onlyOneInput = (0, _isEqual.default)((0, _size.default)(input), 1);
+    const hasMutipleInput = (0, _size.default)(input) > 1;
 
-    if ((0, _isEqual.default)((0, _size.default)(input), 0)) {
+    if (noInput) {
       throw Error('必须提供源文件');
-    } // 处理单个文件源
+    }
 
-
-    if ((0, _isEqual.default)((0, _size.default)(input), 1)) {
-      const urls = await (0, _getUrlsInFile.default)(input[0], {
-        exclude: (0, _identifyExclusion.default)(exclude),
+    if (onlyOneInput) {
+      const urls = await (0, _getUrlsFromOneFile.default)(input[0], {
+        exclude: (0, _getExclusion.default)(exclude),
         extractFromQueryString
       });
-      await (0, _saveFile.default)((0, _join.default)(Array.from(urls), '\n'), (0, _identifyOutput.default)(out));
-    } // 处理多个文件源
+      await (0, _saveFile.default)((0, _join.default)(Array.from(urls), '\n'), (0, _getOutput.default)(out));
+    }
 
-
-    if ((0, _size.default)(input) > 1) {
-      const urls = await (0, _getUrlsInFiles.default)(input, {
-        exclude: (0, _identifyExclusion.default)(exclude),
+    if (hasMutipleInput) {
+      const urls = await (0, _getUrlsFromMultipleFiles.default)(input, {
+        exclude: (0, _getExclusion.default)(exclude),
         extractFromQueryString
       });
-      await (0, _saveFile.default)((0, _join.default)(urls, '\n'), (0, _identifyOutput.default)(out));
+      await (0, _saveFile.default)((0, _join.default)(urls, '\n'), (0, _getOutput.default)(out));
     }
   } catch (err) {
     throw err;

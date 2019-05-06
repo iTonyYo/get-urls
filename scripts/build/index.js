@@ -1,4 +1,4 @@
-import { resolve } from 'path';
+import { resolve, join, dirname } from 'path';
 import { realpathSync } from 'fs';
 import pMap from 'p-map';
 import fg from 'fast-glob';
@@ -11,18 +11,25 @@ const resolveRoot = relativePath => resolve(
 );
 
 (async () => {
-  const src = fg(['src/**/*.js']);
+  const src = await fg(['src/**/*.js']);
 
   await pMap(
-    await src,
+    src,
     async (path) => {
       try {
+        const outDir = dirname(
+          join(
+            resolveRoot('esm'),
+            path.substring('src/'.length, path.length)
+          )
+        );
+
         return await execa(
           'npx',
           [
             'babel',
             '-d',
-            resolveRoot('esm'),
+            outDir,
             resolveRoot(path),
             '--config-file',
             resolveRoot('scripts/build/config.js'),

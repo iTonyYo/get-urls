@@ -1,0 +1,14 @@
+{
+  "check-coverage": true,
+  "per-file": true,
+  "reporter": [
+    "html"
+  ],
+  "report-dir": "./coverage",
+  "cache": false,
+  "include": [
+    "src/**/*.js"
+  ],
+  "skip-empty": true,
+  "skip-full": true
+}

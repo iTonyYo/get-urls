@@ -1,3 +1,7 @@
+globals:
+  run: true
+  describe: true
+  it: true
 extends: airbnb-base
 env:
   node: true

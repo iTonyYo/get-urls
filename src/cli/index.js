@@ -7,10 +7,10 @@ import isEqual from 'lodash/isEqual';
 import size from 'lodash/size';
 
 import saveFile from './saveFile';
-import getUrlsInFiles from './getUrlsInFiles';
-import getUrlsInFile from './getUrlsInFile';
-import identifyExclusion from './identifyExclusion';
-import identifyOutput from './identifyOutput';
+import getUrlsFromMultipleFiles from './getUrlsFromMultipleFiles';
+import getUrlsFromOneFile from './getUrlsFromOneFile';
+import getExclusion from './getExclusion';
+import getOutput from './getOutput';
 
 // 待办： 支持直接在命令行界面中提供一段文本并从中获取所有链接
 // 待办： 若未提供 `out` 参数，则直接在命令行界面中输出结果
@@ -57,39 +57,41 @@ import identifyOutput from './identifyOutput';
     const { input, flags } = cli;
     const { out, exclude, extractFromQueryString } = flags;
 
-    if (isEqual(size(input), 0)) {
+    const noInput = isEqual(size(input), 0);
+    const onlyOneInput = isEqual(size(input), 1);
+    const hasMutipleInput = size(input) > 1;
+
+    if (noInput) {
       throw Error('必须提供源文件');
     }
 
-    // 处理单个文件源
-    if (isEqual(size(input), 1)) {
-      const urls = await getUrlsInFile(
+    if (onlyOneInput) {
+      const urls = await getUrlsFromOneFile(
         input[0],
         {
-          exclude: identifyExclusion(exclude),
+          exclude: getExclusion(exclude),
           extractFromQueryString,
         },
       );
 
       await saveFile(
         join(Array.from(urls), '\n'),
-        identifyOutput(out),
+        getOutput(out),
       );
     }
 
-    // 处理多个文件源
-    if (size(input) > 1) {
-      const urls = await getUrlsInFiles(
+    if (hasMutipleInput) {
+      const urls = await getUrlsFromMultipleFiles(
         input,
         {
-          exclude: identifyExclusion(exclude),
+          exclude: getExclusion(exclude),
           extractFromQueryString,
         },
       );
 
       await saveFile(
         join(urls, '\n'),
-        identifyOutput(out),
+        getOutput(out),
       );
     }
   } catch (err) {

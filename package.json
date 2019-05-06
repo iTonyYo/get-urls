@@ -4,13 +4,15 @@
   },
   "main": "esm/getUrls.js",
   "scripts": {
-    "start": "DEBUG=LG:* npx babel-node ./esm/cli ./test/playlist-1.m3u ./test/playlist-2.m3u --exclude '(s|jpg)' --out './test/result.txt' --extractFromQueryString",
+    "start": "npx babel-node ./esm/cli ./test/playlist-1.m3u ./test/playlist-2.m3u --exclude '(s|jpg)' --out './test/result.txt' --extractFromQueryString",
+    "dev": "DEBUG=LG:* npx babel-node ./src/cli ./test/playlist-1.m3u ./test/playlist-2.m3u --exclude '(s|jpg)' --out './test/result.txt' --extractFromQueryString",
     "build": "npx babel-node ./scripts/clean-built && npx babel-node ./scripts/build",
     "clean": "npx babel-node ./scripts/clean",
     "reprepare": "npx babel-node ./scripts/re-prepare",
     "license": "npx babel-node ./scripts/license",
     "lint": "npx eslint --cache ./src/**/*.js",
-    "changelog": "npx auto-changelog -p"
+    "changelog": "npx auto-changelog -p",
+    "test": "npx nyc mocha --require @babel/register --no-opts --no-package"
   },
   "files": [
     "src/**/*.js",
@@ -21,7 +23,9 @@
     "meow": "^5.0.0",
     "normalize-url": "^4.3.0",
     "p-map": "^2.1.0",
+    "p-waterfall": "^2.1.0",
     "update-notifier": "^2.5.0",
+    "url-parse": "^1.4.7",
     "url-regex": "^5.0.0",
     "write-file-atomic": "^2.4.2"
   },
@@ -29,9 +33,11 @@
     "@babel/core": "^7.4.4",
     "@babel/node": "^7.2.2",
     "@babel/preset-env": "^7.4.4",
+    "@babel/register": "^7.4.4",
     "auto-changelog": "^1.13.0",
     "babel-eslint": "^10.0.1",
     "babel-plugin-add-module-exports": "^1.0.2",
+    "chai": "^4.2.0",
     "chalk": "^2.4.2",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
@@ -41,6 +47,8 @@
     "license-checker": "^25.0.1",
     "listr": "^0.14.3",
     "make-dir": "^3.0.0",
+    "mocha": "^6.1.4",
+    "nyc": "^14.1.0",
     "trash": "^5.2.0"
   },
   "keywords": [

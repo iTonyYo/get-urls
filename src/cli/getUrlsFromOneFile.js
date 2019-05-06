@@ -1,7 +1,7 @@
 import fs from 'fs';
 import util from 'util';
 
-import getUrls from './getUrls';
+import getUrls from '../getUrls';
 
 export default async (
   file,
@@ -11,11 +11,13 @@ export default async (
   },
 ) => {
   const pReadFile = util.promisify(fs.readFile);
-  return getUrls(
+  const urls = await getUrls(
     await pReadFile(file, 'utf8'),
     {
       exclude,
       extractFromQueryString,
     },
   );
+
+  return urls;
 };
