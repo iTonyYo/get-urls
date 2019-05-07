@@ -1,8 +1,8 @@
 {
   "bin": {
-    "get-urls": "esm/cli.js"
+    "get-urls": "esm/cli/index.js"
   },
-  "main": "esm/getUrls.js",
+  "main": "esm/getUrls/index.js",
   "scripts": {
     "start": "npx babel-node ./esm/cli ./test/playlist-1.m3u ./test/playlist-2.m3u --exclude '(jpg|OBA)' --out './test/result.txt' --extractFromQueryString",
     "dev": "DEBUG=LG:* npx babel-node ./src/cli ./test/playlist-1.m3u ./test/playlist-2.m3u --exclude '(jpg|OBA)' --out './test/result.txt' --extractFromQueryString",
