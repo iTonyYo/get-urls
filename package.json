@@ -18,6 +18,7 @@
     "src/**/*.js",
     "esm/**/*.js"
   ],
+  "version": "1.0.3",
   "dependencies": {
     "lodash": "^4.17.11",
     "meow": "^5.0.0",
@@ -69,7 +70,6 @@
   "private": false,
   "name": "@oopsunome/get-urls",
   "description": "获取文本中所有链接，支持过滤。",
-  "version": "1.0.2",
   "author": {
     "name": "iyowei",
     "email": "swzyocowboy@icloud.com",

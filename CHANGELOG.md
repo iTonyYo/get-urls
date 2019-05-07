@@ -1,9 +1,20 @@
 # [`@oopsunome/get-urls`](https://github.com/iTonyYo/get-urls) 更新日志
 
+## [v1.0.3](https://github.com/iTonyYo/get-urls/compare/v1.0.2...v1.0.3) - 2019-05-07
+
+#### 提交
+
+- [[`5b55147`](https://github.com/iTonyYo/get-urls/commit/5b55147e8aed25913ac46fcdde02168f642c2193)] 重构: :recycle: 重构 CUI
+- [[`abec7e2`](https://github.com/iTonyYo/get-urls/commit/abec7e22bc94c2d397a3de545c7a1b9b52019055)] 重构: :recycle: 重构核心
+- [[`8077227`](https://github.com/iTonyYo/get-urls/commit/807722717ae1d5848c2bc84c738b06fed7cf3d27)] 依赖: :package: 升级依赖
+- [[`1ae9663`](https://github.com/iTonyYo/get-urls/commit/1ae966341d4ea80930819d68a49a76924e91ae35)] 文档: :memo: 更新 Git 提交指南
+- [[`2ab24c3`](https://github.com/iTonyYo/get-urls/commit/2ab24c3ef4b29d7ee3dd4095187bf39ad04b1a4f)] 配置: :wrench: 更新 `bin`、`main` 配置
+- [[`313e568`](https://github.com/iTonyYo/get-urls/commit/313e568198fab7fbe3013f8086769e2597cf5c9d)] 配置: :wrench: 更新 VS Code 编辑器配置
 ## [v1.0.2](https://github.com/iTonyYo/get-urls/compare/v1.0.1...v1.0.2) - 2019-04-12
 
 #### 提交
 
+- [[`f3f4578`](https://github.com/iTonyYo/get-urls/commit/f3f45783dcba6d4263b70d9d25c057a572e895c0)] 发版: :bookmark: v1.0.2
 - [[`70c5a3c`](https://github.com/iTonyYo/get-urls/commit/70c5a3c995cac225c522ac3805dde920199f4196)] 功能: :gear: 支持传递 `-V` 参数获取版本号
 ## [v1.0.1](https://github.com/iTonyYo/get-urls/compare/v1.0.0...v1.0.1) - 2019-04-12
 
