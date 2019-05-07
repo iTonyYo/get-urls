@@ -17,9 +17,9 @@ var _booleanType = _interopRequireDefault(require("../type/booleanType"));
 
 var _noEmptyText = _interopRequireDefault(require("./noEmptyText"));
 
-var _addOneUrl = _interopRequireDefault(require("../SetGateway/addOneUrl"));
+var _addOneUrl = _interopRequireDefault(require("./SetGateway/addOneUrl"));
 
-var _addAllUrlsFromQueryParamIfNeedAndExist = _interopRequireDefault(require("../SetGateway/addAllUrlsFromQueryParamIfNeedAndExist"));
+var _addAllUrlsFromQueryParamIfNeedAndExist = _interopRequireDefault(require("./SetGateway/addAllUrlsFromQueryParamIfNeedAndExist"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 

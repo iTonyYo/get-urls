@@ -1,7 +1,7 @@
 import { assert } from 'chai';
 
 import addAllUrlsFromQueryParamIfNeedAndExist
-  from '../src/SetGateway/addAllUrlsFromQueryParamIfNeedAndExist';
+  from '../src/getUrls/SetGateway/addAllUrlsFromQueryParamIfNeedAndExist';
 
 setTimeout(() => {
   describe(

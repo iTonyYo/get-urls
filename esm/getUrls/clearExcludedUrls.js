@@ -9,7 +9,7 @@ var _arrayType = _interopRequireDefault(require("../type/arrayType"));
 
 var _setType = _interopRequireDefault(require("../type/setType"));
 
-var _removeOneUrl = _interopRequireDefault(require("../SetGateway/removeOneUrl"));
+var _removeOneUrl = _interopRequireDefault(require("./SetGateway/removeOneUrl"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 

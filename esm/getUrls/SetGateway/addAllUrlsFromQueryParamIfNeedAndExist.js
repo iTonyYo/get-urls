@@ -11,15 +11,15 @@ var _trim = _interopRequireDefault(require("lodash/trim"));
 
 var _replace = _interopRequireDefault(require("lodash/replace"));
 
-var _setType = _interopRequireDefault(require("../type/setType"));
+var _setType = _interopRequireDefault(require("../../type/setType"));
 
-var _booleanType = _interopRequireDefault(require("../type/booleanType"));
+var _booleanType = _interopRequireDefault(require("../../type/booleanType"));
 
 var _addOneUrl = _interopRequireDefault(require("./addOneUrl"));
 
-var _getUrlsFromQueryParam = _interopRequireDefault(require("../getUrls/getUrlsFromQueryParam"));
+var _getUrlsFromQueryParam = _interopRequireDefault(require("../getUrlsFromQueryParam"));
 
-var _noInvalidLink = _interopRequireDefault(require("../getUrls/noInvalidLink"));
+var _noInvalidLink = _interopRequireDefault(require("../noInvalidLink"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 

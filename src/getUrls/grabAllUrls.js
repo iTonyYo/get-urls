@@ -21,10 +21,10 @@ import booleanType from '../type/booleanType';
 
 import noEmptyText from './noEmptyText';
 
-import addOneUrl from '../SetGateway/addOneUrl';
+import addOneUrl from './SetGateway/addOneUrl';
 
 import addAllUrlsFromQueryParamIfNeedAndExist
-  from '../SetGateway/addAllUrlsFromQueryParamIfNeedAndExist';
+  from './SetGateway/addAllUrlsFromQueryParamIfNeedAndExist';
 
 export default (text = '', extractFromQueryString = true) => {
   noEmptyText(text);
