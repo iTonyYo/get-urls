@@ -1,6 +1,7 @@
+import arrayType from '../type/arrayType';
+import setType from '../type/setType';
+
 import removeOneUrl from '../SetGateway/removeOneUrl';
-import arrayType from './arrayType';
-import setType from './setType';
 
 export default (urls, exclusions) => {
   setType(urls, '`urls` 必须是 `Set` 对象');

@@ -1,13 +1,14 @@
 // 待办： 适配命令行与浏览器下两种实现
-// 待办： 使用不可变数据结构
+// 待办： 使用不可变数据结构而非 Set
 
 import pWaterfall from 'p-waterfall';
 import merge from 'lodash/merge';
 
+import plainObjectType from '../type/plainObjectType';
+import arrayType from '../type/arrayType';
+import booleanType from '../type/booleanType';
+
 import noEmptyText from './noEmptyText';
-import plainObjectType from './plainObjectType';
-import arrayType from './arrayType';
-import booleanType from './booleanType';
 
 import grabAllUrls from './grabAllUrls';
 import clearExcludedUrls from './clearExcludedUrls';

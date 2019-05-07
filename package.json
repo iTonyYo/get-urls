@@ -4,8 +4,8 @@
   },
   "main": "esm/getUrls.js",
   "scripts": {
-    "start": "npx babel-node ./esm/cli ./test/playlist-1.m3u ./test/playlist-2.m3u --exclude '(s|jpg)' --out './test/result.txt' --extractFromQueryString",
-    "dev": "DEBUG=LG:* npx babel-node ./src/cli ./test/playlist-1.m3u ./test/playlist-2.m3u --exclude '(s|jpg)' --out './test/result.txt' --extractFromQueryString",
+    "start": "npx babel-node ./esm/cli ./test/playlist-1.m3u ./test/playlist-2.m3u --exclude '(jpg|OBA)' --out './test/result.txt' --extractFromQueryString",
+    "dev": "DEBUG=LG:* npx babel-node ./src/cli ./test/playlist-1.m3u ./test/playlist-2.m3u --exclude '(jpg|OBA)' --out './test/result.txt' --extractFromQueryString",
     "build": "npx babel-node ./scripts/clean-built && npx babel-node ./scripts/build",
     "clean": "npx babel-node ./scripts/clean",
     "reprepare": "npx babel-node ./scripts/re-prepare",

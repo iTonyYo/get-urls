@@ -2,11 +2,12 @@ import normalizeUrl from 'normalize-url';
 import trim from 'lodash/trim';
 import replace from 'lodash/replace';
 
+import setType from '../type/setType';
+import booleanType from '../type/booleanType';
+
 import addOneUrl from './addOneUrl';
 import getUrlsFromQueryParam from '../getUrls/getUrlsFromQueryParam';
-import setType from '../getUrls/setType';
 import noInvalidLink from '../getUrls/noInvalidLink';
-import booleanType from '../getUrls/booleanType';
 
 export default (urlWithQueryParam, box, extractFromQueryString = true) => {
   noInvalidLink(urlWithQueryParam);

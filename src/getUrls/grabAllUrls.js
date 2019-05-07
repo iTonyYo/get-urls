@@ -16,9 +16,12 @@ import urlRegex from 'url-regex';
 import normalizeUrl from 'normalize-url';
 import trim from 'lodash/trim';
 import replace from 'lodash/replace';
-import addOneUrl from '../SetGateway/addOneUrl';
+
+import booleanType from '../type/booleanType';
+
 import noEmptyText from './noEmptyText';
-import booleanType from './booleanType';
+
+import addOneUrl from '../SetGateway/addOneUrl';
 
 import addAllUrlsFromQueryParamIfNeedAndExist
   from '../SetGateway/addAllUrlsFromQueryParamIfNeedAndExist';

@@ -13,11 +13,11 @@ var _trim = _interopRequireDefault(require("lodash/trim"));
 
 var _replace = _interopRequireDefault(require("lodash/replace"));
 
-var _addOneUrl = _interopRequireDefault(require("../SetGateway/addOneUrl"));
+var _booleanType = _interopRequireDefault(require("../type/booleanType"));
 
 var _noEmptyText = _interopRequireDefault(require("./noEmptyText"));
 
-var _booleanType = _interopRequireDefault(require("./booleanType"));
+var _addOneUrl = _interopRequireDefault(require("../SetGateway/addOneUrl"));
 
 var _addAllUrlsFromQueryParamIfNeedAndExist = _interopRequireDefault(require("../SetGateway/addAllUrlsFromQueryParamIfNeedAndExist"));
 

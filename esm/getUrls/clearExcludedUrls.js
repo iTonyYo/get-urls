@@ -5,11 +5,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
+var _arrayType = _interopRequireDefault(require("../type/arrayType"));
+
+var _setType = _interopRequireDefault(require("../type/setType"));
+
 var _removeOneUrl = _interopRequireDefault(require("../SetGateway/removeOneUrl"));
-
-var _arrayType = _interopRequireDefault(require("./arrayType"));
-
-var _setType = _interopRequireDefault(require("./setType"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 

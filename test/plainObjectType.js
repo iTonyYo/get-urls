@@ -1,10 +1,14 @@
 import { assert } from 'chai';
 
-import plainObjectType from '../src/getUrls/plainObjectType';
+import plainObjectType from '../src/type/plainObjectType';
 
 setTimeout(() => {
   describe('plainObjectType(target, errorMessage)', () => {
     const errorMessage = '`target` 选项必须是对象字面量';
+
+    it('未提供错误消息的情况下，返回判断结果', () => {
+      assert.isTrue(plainObjectType({}));
+    });
 
     it('`target` 不可以是函数', () => {
       const target = () => {};
