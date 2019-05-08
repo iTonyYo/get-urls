@@ -1,5 +1,13 @@
 # [`@oopsunome/get-urls`](https://github.com/iTonyYo/get-urls) 更新日志
 
+## [v1.0.4](https://github.com/iTonyYo/get-urls/compare/v1.0.3...v1.0.4) - 2019-05-08
+
+#### 提交
+
+- [[`23ae6f0`](https://github.com/iTonyYo/get-urls/commit/23ae6f0dfc3762511acc2ed631d1bc02ce882c30)] 重构: :recycle: 将 CUI 中的错误处理隔离看待，独立于主要逻辑之外
+- [[`ec5d115`](https://github.com/iTonyYo/get-urls/commit/ec5d115df14d23377f7b032689b76367003e7514)] 文档: :memo: 移除 `参与开发` & `待办` 部分
+- [[`985efec`](https://github.com/iTonyYo/get-urls/commit/985efec6310cec4d0f2478bbc4ff7cfcd0aaf5af)] 重构: :recycle: 调整文件夹层次
+- [[`21a9eb3`](https://github.com/iTonyYo/get-urls/commit/21a9eb38ffe51fe87d789371c3a7f14cc71f816b)] 测试: :white_check_mark: 移除对 `*-test.js` 文件的忽略
 ## [v1.0.3](https://github.com/iTonyYo/get-urls/compare/v1.0.2...v1.0.3) - 2019-05-07
 
 #### 提交
@@ -7,6 +15,7 @@
 - [[`5b55147`](https://github.com/iTonyYo/get-urls/commit/5b55147e8aed25913ac46fcdde02168f642c2193)] 重构: :recycle: 重构 CUI
 - [[`abec7e2`](https://github.com/iTonyYo/get-urls/commit/abec7e22bc94c2d397a3de545c7a1b9b52019055)] 重构: :recycle: 重构核心
 - [[`8077227`](https://github.com/iTonyYo/get-urls/commit/807722717ae1d5848c2bc84c738b06fed7cf3d27)] 依赖: :package: 升级依赖
+- [[`e485ae3`](https://github.com/iTonyYo/get-urls/commit/e485ae3f6abe1841cc3f94b66e7465b6d16d9188)] 发版: :bookmark: v1.0.3
 - [[`1ae9663`](https://github.com/iTonyYo/get-urls/commit/1ae966341d4ea80930819d68a49a76924e91ae35)] 文档: :memo: 更新 Git 提交指南
 - [[`2ab24c3`](https://github.com/iTonyYo/get-urls/commit/2ab24c3ef4b29d7ee3dd4095187bf39ad04b1a4f)] 配置: :wrench: 更新 `bin`、`main` 配置
 - [[`313e568`](https://github.com/iTonyYo/get-urls/commit/313e568198fab7fbe3013f8086769e2597cf5c9d)] 配置: :wrench: 更新 VS Code 编辑器配置
